@@ -5,7 +5,7 @@
 
 import { Request, Response } from 'express';
 // For showcase purposes, defining types directly here for clarity,
-// as the user decided not to publish defs.ts
+// as defs.ts is not published
 type TAiChatData = {
     answer: string;
     total_tokens?: number;
@@ -14,17 +14,17 @@ type TAiChatData = {
 type TWorkerCallback = (request: Request, response: Response, value: TAiChatData | string) => void;
 
 
-import { ServerBase } from '../defs/server'; // Assuming server.ts is published
-import { ServiceBase } from '../defs/service'; // Assuming service.ts is published
+import { ServerBase } from '../defs/server';
+import { ServiceBase } from '../defs/service';
 
 /**
  * AI Services Class
- * * This class handles routing for various AI functionalities.
- * * Routes/Endpoints:
- * * - **OpenAI:** Submits a question to OpenAI's ChatGPT.
+ * This class handles routing for various AI functionalities.
+ * Routes/Endpoints:
+ * - **OpenAI:** Submits a question to OpenAI's ChatGPT.
  * - **Google:** Submits a question to Google's Gemini.
- * - **Dialogflow:** Submits a question to Dialogflow for intent and entity detection.
- * * @class
+ *  **Dialogflow:** Submits a question to Dialogflow for intent and entity detection.
+ * @class
  */
 class AiService extends ServiceBase {
     
