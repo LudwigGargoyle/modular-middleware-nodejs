@@ -28,7 +28,6 @@ Legacy Backend Verification: The legacy backend receives the session ID from the
 This approach demonstrates a practical method to modernize authentication for existing applications with minimal disruption.
 
 Use Case Example: AI Service Integration (Conceptual)
-(Here you would add a similar section for AI integration if you have code for it. For now, it's conceptual. If you provide the AI worker, we'll fill this in!)
 
 Problem: Legacy applications may lack direct interfaces for calling modern AI/ML models (e.g., for data enrichment, predictive analysis).
 Solution: The middleware could expose a dedicated endpoint. The legacy system makes a standard HTTP request to this endpoint, which then internally dispatches the request to an AI worker. The AI worker handles the communication with the external AI service, processes the data, and returns the results to the middleware, which then formats them for the legacy system. This keeps complex AI integrations separate from the legacy code.
@@ -42,8 +41,6 @@ tedious: A TDS protocol implementation, used for connecting to MS SQL Server (de
 crypto: Node.js native module for cryptographic operations (e.g., hashing).
 fs, path: Node.js native modules for file system operations (e.g., certificate loading).
 (Add any other libraries used for AI or other integrations)
-Getting Started
-(Add clear instructions here on how to set up, configure, and run the project. Include details about sp/cert.cer, sp/key.pem, idps/idpName/cert.cer and configuration files. Mention how to run different "services" or "endpoints".)
 
 Future Enhancements / Considerations
 Database Abstraction: Implement an ORM or a more generic database layer to support various database systems beyond MS SQL Server.
