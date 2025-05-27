@@ -13,10 +13,10 @@ SAML 2.0 Service Provider (SP) Implementation: Full handling of SAML SSO flows, 
 Multithreaded Processing with worker_threads: Offloads intensive or blocking tasks (like SAML message processing, complex AI computations, or heavy database interactions) to worker threads. This ensures the main event loop remains free, significantly improving the overall scalability, responsiveness, and throughput of the middleware.  
 Modular and Extensible Design: Built on a flexible base framework (ServerBase, ServiceBase, WorkerBase) that promotes code reusability, clear separation of concerns, and simplifies the addition of new integration points or technological capabilities.  
 Database Integration for Session/Data Bridging: Utilizes a dedicated database table (auth_sessions for SAML, and potentially other tables for other integrations) to serve as a reliable, shared data store for synchronizing critical information between the middleware and legacy systems.  
-Security-Conscious Design:  
-For SAML, it includes hashing of user name_id for enhanced privacy, configuration for secure cookie options (secure, SameSite), and a design for immediate consumption and elimination of transient session cookies by the frontend.  
+Security-Conscious Design: For SAML, it includes hashing of user name_id for enhanced privacy, configuration for secure cookie options (secure, SameSite), and a design for immediate consumption and elimination of transient session cookies by the frontend.  
 Emphasizes secure data transfer mechanisms (e.g., custom HTTP headers) for communication between new and legacy components.  
 TypeScript Implementation: Enhances code quality, maintainability, and developer experience through strong static typing.  
+
 Use Case Example: SAML SSO Integration  
 One concrete application of this middleware is facilitating Single Sign-On (SSO) for a legacy application using SAML. Here's how it works:  
 
