@@ -7,7 +7,7 @@ In complex enterprise environments, the introduction of new technologies often c
 
 The architecture leverages Node.js worker_threads to ensure high performance and non-blocking I/O operations across various integration points, making it suitable for diverse and demanding workloads.
 
-Key Features
+Key Features  
 Technology Agnostic Integration Layer: Designed to bridge the gap between new technologies (e.g., SAML, AI services, external APIs) and existing legacy applications.  
 SAML 2.0 Service Provider (SP) Implementation: Full handling of SAML SSO flows, including metadata generation, login request initiation, and Assertion Consumer Service (ACS) processing, specifically designed to integrate authentication with legacy backends.  
 Multithreaded Processing with worker_threads: Offloads intensive or blocking tasks (like SAML message processing, complex AI computations, or heavy database interactions) to worker threads. This ensures the main event loop remains free, significantly improving the overall scalability, responsiveness, and throughput of the middleware.  
