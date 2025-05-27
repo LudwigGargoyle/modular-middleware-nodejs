@@ -2,7 +2,7 @@
 Enterprise Integration Middleware for Legacy Systems Modernization
 This project presents a robust and scalable Node.js middleware designed to act as a central integration layer for modernizing existing enterprise applications. It enables the adoption of new, cutting-edge technologies (such as SAML SSO, Artificial Intelligence capabilities, and more) by providing a seamless interface to legacy systems, minimizing the need for extensive modifications to their existing codebases.
 
-Project Overview
+Project Overview  
 In complex enterprise environments, the introduction of new technologies often clashes with the reality of deeply entrenched legacy systems. This middleware addresses this challenge by functioning as an agnostic integration hub. It allows modern services to interact with older applications, abstracting away the complexities and limitations of legacy APIs and data structures.
 
 The architecture leverages Node.js worker_threads to ensure high performance and non-blocking I/O operations across various integration points, making it suitable for diverse and demanding workloads.
