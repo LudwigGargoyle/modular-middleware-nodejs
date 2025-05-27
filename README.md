@@ -27,10 +27,10 @@ Header-Based Session Forwarding: The legacy frontend, having received this sessi
 Legacy Backend Verification: The legacy backend receives the session ID from the HTTP headers (or request body). It then queries the auth_sessions table, comparing the received session ID and user identifier to confirm the user's active and valid SAML session with the Identity Provider. This allows the legacy application to grant access without needing to understand the SAML protocol itself.  
 This approach demonstrates a practical method to modernize authentication for existing applications with minimal disruption.  
 
-Use Case Example: AI Service Integration (Conceptual)  
+Use Case Example: AI Services Integration (worker not published)
 
 Problem: Legacy applications may lack direct interfaces for calling modern AI/ML models (e.g., for data enrichment, predictive analysis).  
-Solution: The middleware could expose a dedicated endpoint. The legacy system makes a standard HTTP request to this endpoint, which then internally dispatches the request to an AI worker. The AI worker handles the communication with the external AI service, processes the data, and returns the results to the middleware, which then formats them for the legacy system. This keeps complex AI integrations separate from the legacy code.  
+Solution: The middleware exposes a dedicated endpoint. The legacy system makes a standard HTTP request to this endpoint, which then internally dispatches the request to an AI worker. The AI worker handles the communication with the external AI service, processes the data, and returns the results to the middleware, which then formats them for the legacy system. This keeps complex AI integrations separate from the legacy code.  
 Technologies Used  
 Node.js: Core runtime environment.  
 TypeScript: For type-safe development.  
@@ -40,7 +40,6 @@ saml2-js: A library for SAML 2.0 protocol implementation.
 tedious: A TDS protocol implementation, used for connecting to MS SQL Server (demonstrates database interaction; easily extensible to other ORMs/database drivers).  
 crypto: Node.js native module for cryptographic operations (e.g., hashing).  
 fs, path: Node.js native modules for file system operations (e.g., certificate loading).  
-
 
 Future Enhancements / Considerations  
 Database Abstraction: Implement an ORM or a more generic database layer to support various database systems beyond MS SQL Server.  
