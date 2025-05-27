@@ -35,15 +35,15 @@ import { ServiceBase } from '../defs/service';
 
 /**
  * SAML Service Class
- * * This class implements a Service Provider (SP) for SAML-based federated authentication.
- * * It handles interactions with an Identity Provider (IdP) for single sign-on (SSO).
- * *
- * * Routes/Endpoints:
- * * - **/cookie** (GET): Produces test authentication data (cookie) based on configuration for a specified application.
- * * - **/metadata** (GET): Generates the SAML Service Provider metadata XML for data exchange with the Identity Provider.
- * * - **/sso-redirect** (GET): Initiates the federated authentication flow by redirecting the browser to the Identity Provider's login page.
- * * - **/acs** (POST): Validates the SAML Assertion returned by the Identity Provider and manages the user session.
- * * @class
+ * This class implements a Service Provider (SP) for SAML-based federated authentication.
+ * It handles interactions with an Identity Provider (IdP) for single sign-on (SSO).
+ * 
+ * Routes/Endpoints:
+ * - **/cookie** (GET): Produces test authentication data (cookie) based on configuration for a specified application.
+ * - **/metadata** (GET): Generates the SAML Service Provider metadata XML for data exchange with the Identity Provider.
+ * - **/sso-redirect** (GET): Initiates the federated authentication flow by redirecting the browser to the Identity Provider's login page.
+ * - **/acs** (POST): Validates the SAML Assertion returned by the Identity Provider and manages the user session.
+ * @class
  */
 class SAMLService extends ServiceBase {
     
