@@ -19,7 +19,7 @@ Built with Node.js and TypeScript, it leverages `worker_threads` for **high-perf
 ## ✨ Key Features  
 
 - **Technology-Agnostic Integration Layer**: Bridges modern APIs (SAML, AI, external services) with legacy systems.  
-- **SAML 2.0 SP Support**: Handles full SAML SSO flow, integrating identity providers with legacy backends.  
+- **SAML 2.0 SP Support**: Handles full SAML SSO flow, integrating identity providers with legacy frontends.  
 - **Multithreading via `worker_threads`**: Offloads CPU-heavy tasks, improving scalability and responsiveness.  
 - **Modular Architecture**: `ServerBase`, `ServiceBase`, `WorkerBase` classes promote reuse and extension.  
 - **Shared Session Data via DB**: Session data (e.g. SAML assertions) stored in a shared SQL table (`auth_sessions`).  
